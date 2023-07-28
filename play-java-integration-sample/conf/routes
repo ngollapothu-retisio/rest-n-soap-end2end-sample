@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample REST Api
+GET     /ping              controllers.CatalogServiceController.ping
+GET     /catalogs          controllers.CatalogServiceController.getCatalogs(request:Request)
+GET     /catalogs/:id      controllers.CatalogServiceController.getCatalog(id)
+POST    /catalogs          controllers.CatalogServiceController.createCatalog(request:Request)
+PUT     /catalogs          controllers.CatalogServiceController.updateCatalog(request:Request)
+PATCH   /catalogs/:id      controllers.CatalogServiceController.patchCatalog(request:Request, id)
+DELETE  /catalogs/:id      controllers.CatalogServiceController.deleteCatalog(request:Request, id)
+
+
+# An example controller showing a sample SOAP Api
+GET     /soap/client/:name      controllers.SoapServiceController.getCountry(name)
+
