@@ -8,3 +8,5 @@ POST    /catalogs          com.retisio.arc.controller.CatalogServiceController.c
 PUT     /catalogs          com.retisio.arc.controller.CatalogServiceController.updateCatalog(request:Request)
 PATCH   /catalogs/:id      com.retisio.arc.controller.CatalogServiceController.patchCatalog(request:Request, id)
 DELETE  /catalogs/:id      com.retisio.arc.controller.CatalogServiceController.deleteCatalog(id)
+POST    /catalogs/csv/import    com.retisio.arc.controller.CatalogServiceController.importCsvCatalog(request:Request)
+GET    /catalogs/csv/export     com.retisio.arc.controller.CatalogServiceController.exportCsvCatalog

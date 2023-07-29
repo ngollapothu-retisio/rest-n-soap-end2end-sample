@@ -22,13 +22,17 @@ lazy val `catalog-impl` = (project in file("catalog-impl"))
   .settings(common)
   .settings(
     libraryDependencies ++= Seq(
-      guice
+      guice,
+      jacksonCsv,
+      commonsIo
     )
   )
   .dependsOn(`catalog-api`)
 
 val lombok = "org.projectlombok" % "lombok" % "1.18.2"
 val commonslang3 = "org.apache.commons" % "commons-lang3" % "3.9"
+val jacksonCsv = "com.fasterxml.jackson.dataformat" % "jackson-dataformat-csv" % "2.11.0"
+val commonsIo = "commons-io" % "commons-io" % "2.11.0"
 
 def common = Seq(
   dockerExposedPorts := Seq(9000, 8558, 9091, 10001),
